@@ -10,5 +10,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::get('/chat', Chatbot::class)->name('chat')->middleware(['auth']);
+Route::get('/alter-chat');
 
 require __DIR__.'/settings.php';
