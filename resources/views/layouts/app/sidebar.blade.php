@@ -16,10 +16,10 @@
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
                     <flux:sidebar.item icon="sparkles" :href="route('chat')" :current="request()->routeIs('chat')" wire:navigate>
-                        {{ __('Chat') }}
+                        {{ __('Laravel Chat') }}
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="chat-bubble-left-ellipsis">
-                        {{ __('Alter Chat') }}
+                    <flux:sidebar.item icon="chat-bubble-left-ellipsis" :href="route('vue.chat')" :current="request()->routeIs('vue.chat')" wire:navigate>
+                        {{ __('Vue Chat') }}
                     </flux:sidebar.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>
