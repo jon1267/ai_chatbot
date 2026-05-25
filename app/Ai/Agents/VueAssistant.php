@@ -9,6 +9,7 @@ use Laravel\Ai\Contracts\HasTools;
 use Laravel\Ai\Contracts\Tool;
 use Laravel\Ai\Messages\Message;
 use Laravel\Ai\Promptable;
+use App\Enums\ChatTypes;
 use Stringable;
 
 class VueAssistant implements Agent, Conversational, HasTools
@@ -20,7 +21,10 @@ class VueAssistant implements Agent, Conversational, HasTools
      */
     public function instructions(): Stringable|string
     {
-        return <<<PROMPT
+        return ChatTypes::VUE_CHAT->instructions();
+
+        /*
+         return <<<PROMPT
         You are an expert Vue JS version 3.5 coding assistant with deep knowledge of the Vue JS ecosystem.
         
         Your role:
@@ -39,6 +43,7 @@ class VueAssistant implements Agent, Conversational, HasTools
         - Friendly, concise, and developer-focused
         - Talk like a senior developer helping a colleague, not like a formal documentation page
         PROMPT;
+        */
     }
 
     /**

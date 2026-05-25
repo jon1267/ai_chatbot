@@ -9,6 +9,7 @@ use Laravel\Ai\Contracts\HasTools;
 use Laravel\Ai\Contracts\Tool;
 use Laravel\Ai\Messages\Message;
 use Laravel\Ai\Promptable;
+use App\Enums\ChatTypes;
 use Stringable;
 
 class LaravelAssistant implements Agent, Conversational, HasTools
@@ -20,6 +21,9 @@ class LaravelAssistant implements Agent, Conversational, HasTools
      */
     public function instructions(): Stringable|string
     {
+        return ChatTypes::LARAVEL_CHAT->instructions();
+
+        /*
         return <<<PROMPT
         You are an expert Laravel coding assistant with deep knowledge of the Laravel 12 ecosystem.
         
@@ -40,6 +44,7 @@ class LaravelAssistant implements Agent, Conversational, HasTools
         - Friendly, concise, and developer-focused
         - Talk like a senior developer helping a colleague, not like a formal documentation page
         PROMPT;
+        */
     }
 
     /**
