@@ -22,9 +22,9 @@ enum ChatTypes: string
     public function icon(): string
     {
         return match ($this) {
-            self::LARAVEL_CHAT => 'sparkles',
+            self::LARAVEL_CHAT => 'chat-bubble-oval-left-ellipsis',
             self::VUE_CHAT => 'chat-bubble-left-ellipsis',
-            self::AI_CHAT  => 'chat-bubble-oval-left-ellipsis',
+            self::AI_CHAT  => 'sparkles',
         };
     }
 

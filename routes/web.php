@@ -12,5 +12,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::get('/chat', Chatbot::class)->name('chat')->middleware(['auth']);
 Route::get('/vue-chat', Chetbot::class)->name('vue.chat')->middleware(['auth']);
+Route::livewire('/ai-chat', 'aichat.ai-chatbot')->name('ai.chat')->middleware(['auth']);
 
 require __DIR__.'/settings.php';

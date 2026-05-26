@@ -15,11 +15,15 @@
                     <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="sparkles" :href="route('chat')" :current="request()->routeIs('chat')" wire:navigate>
+                    <flux:sidebar.item icon="{{ \App\Enums\ChatTypes::LARAVEL_CHAT->icon() }}" :href="route('chat')" :current="request()->routeIs('chat')" wire:navigate>
                         {{ __('Laravel Chat') }}
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="chat-bubble-left-ellipsis" :href="route('vue.chat')" :current="request()->routeIs('vue.chat')" wire:navigate>
+                    <flux:sidebar.item icon="{{ \App\Enums\ChatTypes::VUE_CHAT->icon() }}" :href="route('vue.chat')" :current="request()->routeIs('vue.chat')" wire:navigate>
                         {{ __('Vue Chat') }}
+                    </flux:sidebar.item>
+
+                    <flux:sidebar.item icon="{{ \App\Enums\ChatTypes::AI_CHAT->icon() }}" :href="route('ai.chat')" :current="request()->routeIs('ai.chat')" wire:navigate>
+                        {{ __('AI Chat') }}
                     </flux:sidebar.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>

@@ -12,5 +12,8 @@
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+<!-- sfc component LifeWare4 (markdown output) working only with this line!!! -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 @fluxAppearance
